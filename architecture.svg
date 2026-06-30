@@ -112,10 +112,10 @@
   <text x="257" y="348" fill="#3fb950" font-size="11" font-weight="bold" text-anchor="middle">NEAR-GREEN</text>
 
   <!-- Score improvement callout -->
-  <rect x="365" y="295" width="420" height="64" rx="6" fill="#0f2a1a" stroke="#3fb950" stroke-width="1.5"/>
-  <text x="575" y="318" fill="#3fb950" font-size="13" font-weight="bold" text-anchor="middle">Compliance Delta</text>
-  <text x="575" y="338" fill="#8b949e" font-size="12" text-anchor="middle">DC Baseline: 43.86% (RED)  →  After STIG GPO: 53.71%  →  After Manual: 92.56% (near-GREEN)</text>
-  <text x="575" y="354" fill="#8b949e" font-size="11" text-anchor="middle">128 failing controls → 8 remaining — measured with DISA SCC 5.14 SCAP benchmarks</text>
+  <rect x="365" y="295" width="510" height="64" rx="6" fill="#0f2a1a" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="620" y="315" fill="#3fb950" font-size="13" font-weight="bold" text-anchor="middle">Compliance Delta</text>
+  <text x="620" y="333" fill="#8b949e" font-size="11" text-anchor="middle">Baseline: 43.86% (RED)  →  After GPO: 53.71%  →  After Manual Hardening: 92.56% (near-GREEN)</text>
+  <text x="620" y="349" fill="#8b949e" font-size="11" text-anchor="middle">128 failing controls → 8 remaining — measured with DISA SCC 5.14 SCAP benchmarks</text>
 
   <!-- Arrow marker -->
   <defs>
