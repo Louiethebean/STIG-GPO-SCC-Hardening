@@ -1,0 +1,135 @@
+<svg viewBox="0 0 900 420" xmlns="http://www.w3.org/2000/svg" font-family="monospace" font-size="13">
+  <rect width="900" height="420" fill="#0d1117"/>
+
+  <!-- Title -->
+  <text x="450" y="32" fill="#e6edf3" font-size="15" font-weight="bold" text-anchor="middle">STIG Hardening Lifecycle — Windows Server 2022 AD Lab</text>
+
+  <!-- Phase boxes -->
+  <!-- 1: Kali/RDP -->
+  <rect x="20" y="60" width="130" height="64" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+  <text x="85" y="84" fill="#58a6ff" font-size="12" font-weight="bold" text-anchor="middle">Kali Linux</text>
+  <text x="85" y="100" fill="#8b949e" font-size="11" text-anchor="middle">xfreerdp</text>
+  <text x="85" y="115" fill="#8b949e" font-size="11" text-anchor="middle">172.16.1.10</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="150" y1="92" x2="185" y2="92" stroke="#388bfd" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- 2: Domain Controller -->
+  <rect x="185" y="60" width="145" height="64" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+  <text x="257" y="84" fill="#58a6ff" font-size="12" font-weight="bold" text-anchor="middle">Domain Controller</text>
+  <text x="257" y="100" fill="#8b949e" font-size="11" text-anchor="middle">DW-DC-OC-1</text>
+  <text x="257" y="115" fill="#8b949e" font-size="11" text-anchor="middle">designworld.com</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="330" y1="92" x2="365" y2="92" stroke="#388bfd" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- 3: AD OUs -->
+  <rect x="365" y="60" width="145" height="64" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+  <text x="437" y="84" fill="#58a6ff" font-size="12" font-weight="bold" text-anchor="middle">AD — Create OUs</text>
+  <text x="437" y="100" fill="#8b949e" font-size="11" text-anchor="middle">Members Server</text>
+  <text x="437" y="115" fill="#8b949e" font-size="11" text-anchor="middle">Linux</text>
+
+  <!-- Arrow 3→4 -->
+  <line x1="510" y1="92" x2="545" y2="92" stroke="#388bfd" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- 4: DISA Download -->
+  <rect x="545" y="60" width="145" height="64" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+  <text x="617" y="84" fill="#58a6ff" font-size="12" font-weight="bold" text-anchor="middle">Download GPO Pkg</text>
+  <text x="617" y="100" fill="#8b949e" font-size="11" text-anchor="middle">public.cyber.mil</text>
+  <text x="617" y="115" fill="#8b949e" font-size="11" text-anchor="middle">Jan 2026 Bundle</text>
+
+  <!-- Arrow 4→5 -->
+  <line x1="690" y1="92" x2="725" y2="92" stroke="#388bfd" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- 5: SCC Baseline -->
+  <rect x="725" y="60" width="150" height="64" rx="6" fill="#161b22" stroke="#f85149" stroke-width="1.5"/>
+  <text x="800" y="84" fill="#f85149" font-size="12" font-weight="bold" text-anchor="middle">SCC Baseline Scan</text>
+  <text x="800" y="100" fill="#8b949e" font-size="11" text-anchor="middle">Score: 43.86%</text>
+  <text x="800" y="115" fill="#f85149" font-size="11" font-weight="bold" text-anchor="middle">RED</text>
+
+  <!-- Row 2 -->
+  <!-- Arrow down from SCC Baseline -->
+  <line x1="800" y1="124" x2="800" y2="175" stroke="#388bfd" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- 6: Migration Table -->
+  <rect x="725" y="175" width="150" height="64" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+  <text x="800" y="199" fill="#58a6ff" font-size="12" font-weight="bold" text-anchor="middle">Migration Table</text>
+  <text x="800" y="215" fill="#8b949e" font-size="11" text-anchor="middle">Map Domain SIDs</text>
+  <text x="800" y="230" fill="#8b949e" font-size="11" text-anchor="middle">importtable.migtable</text>
+
+  <!-- Arrow left -->
+  <line x1="725" y1="207" x2="690" y2="207" stroke="#388bfd" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- 7: PS Import Script -->
+  <rect x="545" y="175" width="145" height="64" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+  <text x="617" y="199" fill="#58a6ff" font-size="12" font-weight="bold" text-anchor="middle">Run PS Script</text>
+  <text x="617" y="215" fill="#8b949e" font-size="11" text-anchor="middle">DISA_GPO_Baseline.ps1</text>
+  <text x="617" y="230" fill="#8b949e" font-size="11" text-anchor="middle">Imports all STIGs</text>
+
+  <!-- Arrow left -->
+  <line x1="545" y1="207" x2="510" y2="207" stroke="#388bfd" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- 8: Link GPO -->
+  <rect x="365" y="175" width="145" height="64" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+  <text x="437" y="199" fill="#58a6ff" font-size="12" font-weight="bold" text-anchor="middle">Link GPO to OU</text>
+  <text x="437" y="215" fill="#8b949e" font-size="11" text-anchor="middle">WinSvr 2022 MS</text>
+  <text x="437" y="230" fill="#8b949e" font-size="11" text-anchor="middle">STIG Comp v2r7</text>
+
+  <!-- Arrow left -->
+  <line x1="365" y1="207" x2="330" y2="207" stroke="#388bfd" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- 9: gpupdate -->
+  <rect x="185" y="175" width="145" height="64" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+  <text x="257" y="199" fill="#58a6ff" font-size="12" font-weight="bold" text-anchor="middle">gpupdate /force</text>
+  <text x="257" y="215" fill="#8b949e" font-size="11" text-anchor="middle">DW-FS-OC-1</text>
+  <text x="257" y="230" fill="#8b949e" font-size="11" text-anchor="middle">Policy applied</text>
+
+  <!-- Arrow left -->
+  <line x1="185" y1="207" x2="150" y2="207" stroke="#388bfd" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- 10: SCC Post-GPO -->
+  <rect x="20" y="175" width="130" height="64" rx="6" fill="#161b22" stroke="#d29922" stroke-width="1.5"/>
+  <text x="85" y="199" fill="#d29922" font-size="12" font-weight="bold" text-anchor="middle">SCC Re-Scan</text>
+  <text x="85" y="215" fill="#8b949e" font-size="11" text-anchor="middle">Score: 53.71%</text>
+  <text x="85" y="230" fill="#d29922" font-size="11" font-weight="bold" text-anchor="middle">YELLOW</text>
+
+  <!-- Arrow down -->
+  <line x1="85" y1="239" x2="85" y2="295" stroke="#388bfd" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- 11: Manual Hardening -->
+  <rect x="20" y="295" width="130" height="64" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+  <text x="85" y="316" fill="#58a6ff" font-size="12" font-weight="bold" text-anchor="middle">Manual</text>
+  <text x="85" y="332" fill="#58a6ff" font-size="12" font-weight="bold" text-anchor="middle">Hardening</text>
+  <text x="85" y="348" fill="#8b949e" font-size="11" text-anchor="middle">CAT I / CAT II</text>
+
+  <!-- Arrow right -->
+  <line x1="150" y1="327" x2="185" y2="327" stroke="#388bfd" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- 12: Final SCC Scan -->
+  <rect x="185" y="295" width="145" height="64" rx="6" fill="#161b22" stroke="#3fb950" stroke-width="2"/>
+  <text x="257" y="316" fill="#3fb950" font-size="12" font-weight="bold" text-anchor="middle">Final SCC Scan</text>
+  <text x="257" y="332" fill="#8b949e" font-size="11" text-anchor="middle">Score: 92.56%</text>
+  <text x="257" y="348" fill="#3fb950" font-size="11" font-weight="bold" text-anchor="middle">NEAR-GREEN</text>
+
+  <!-- Score improvement callout -->
+  <rect x="365" y="295" width="420" height="64" rx="6" fill="#0f2a1a" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="575" y="318" fill="#3fb950" font-size="13" font-weight="bold" text-anchor="middle">Compliance Delta</text>
+  <text x="575" y="338" fill="#8b949e" font-size="12" text-anchor="middle">DC Baseline: 43.86% (RED)  →  After STIG GPO: 53.71%  →  After Manual: 92.56% (near-GREEN)</text>
+  <text x="575" y="354" fill="#8b949e" font-size="11" text-anchor="middle">128 failing controls → 8 remaining — measured with DISA SCC 5.14 SCAP benchmarks</text>
+
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#388bfd"/>
+    </marker>
+  </defs>
+
+  <!-- Legend -->
+  <rect x="20" y="385" width="12" height="12" fill="none" stroke="#f85149" stroke-width="1.5"/>
+  <text x="36" y="396" fill="#8b949e" font-size="11">RED (&lt;80%)</text>
+  <rect x="110" y="385" width="12" height="12" fill="none" stroke="#d29922" stroke-width="1.5"/>
+  <text x="126" y="396" fill="#8b949e" font-size="11">YELLOW (80-89%)</text>
+  <rect x="240" y="385" width="12" height="12" fill="none" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="256" y="396" fill="#8b949e" font-size="11">GREEN (90%+)</text>
+  <text x="450" y="396" fill="#8b949e" font-size="11" text-anchor="middle">SCC color bands per DISA SCAP scoring guidance</text>
+</svg>
